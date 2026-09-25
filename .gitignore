@@ -1,0 +1,28 @@
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+# Local credentials and editor settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vscode/
+.idea/
+# Acquisition output and logs
+captures/
+results/
+*.log
+# Vendor binaries and device-specific calibration
+*.dll
+*.so
+*.dylib
+drivers/aseq/aseq_wavelengths_latest.txt

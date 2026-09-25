@@ -1,0 +1,45 @@
+# 工作电脑默认配置。移动到工作电脑后，通常只需要确认 Arduino 的 port。
+
+[paths]
+output_root = "D:\\captures\\microscope"
+kinesis_dir = "C:\\Program Files\\Thorlabs\\Kinesis"
+aseq_dll = "drivers\\aseq\\spectrlib_shared_64bits.dll"
+aseq_calibration = "drivers\\aseq\\aseq_wavelengths_latest.txt"
+
+[devices]
+camera_index = 0
+stage_serial = "49871116"
+arduino_port = "COM3"
+arduino_baud_rate = 9600
+spectrum_device_index = 0
+
+[camera]
+exposure_us = 10000
+gain = 50
+image_type = "raw16"
+
+[led]
+exposure_us = 75000
+gain = 300
+wb_r = 63
+wb_b = 79
+image_type = "rgb24"
+
+[laser]
+exposure_us = 50000
+gain = 20
+wb_r = 55
+wb_b = 75
+image_type = "rgb24"
+
+[acquisition]
+duration_minutes = 60.0
+cycle_interval_seconds = 10.0
+light_settle_seconds = 0.1
+led_hold_seconds = 3.0
+led_off_wait_seconds = 2.0
+laser_hold_seconds = 3.0
+laser_off_wait_seconds = 2.0
+autofocus_every_cycles = 100
+spectrum_enabled = true
+

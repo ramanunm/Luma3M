@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "microscope-control"
+version = "2.0.0"
+description = "ZWO/Thorlabs/Arduino/ASEQ microscope acquisition control"
+requires-python = ">=3.11,<3.12"
+dependencies = ["numpy", "pyserial", "pythonnet", "pyzwoasi", "tifffile"]
+
+[project.optional-dependencies]
+preview = ["opencv-python"]
+
+[project.scripts]
+microscopy = "microscope_control.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["microscope_control*"]
